@@ -56,6 +56,14 @@ $ git stash apply stash@{0}
 
 首先，可以试图用git push origin branch-name推送自己的修改；
 
+命令git tag <name>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+
+git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+
+git tag -s <tagname> -m "blablabla..."可以用PGP签名标签；
+
+命令git tag可以查看所有标签。
+
 如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
 
 如果合并有冲突，则解决冲突，并在本地提交；
